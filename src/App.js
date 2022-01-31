@@ -183,7 +183,7 @@ onInputChange = (event) => {
 
 onButtonSubmit = () => {
   this.setState({imageUrl: this.state.input});
-     fetch('https://arcane-caverns-44362.herokuapp.com/imageurl', {
+     fetch(`${process.env.REACT_APP_SERVER_URL}/imageurl`, {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -193,7 +193,7 @@ onButtonSubmit = () => {
     .then(response => response.json())
     .then(response => {
       if (response) { 
-        fetch('https://arcane-caverns-44362.herokuapp.com/image', {
+        fetch(`${process.env.REACT_APP_SERVER_URL}/image`, {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
