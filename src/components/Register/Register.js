@@ -23,7 +23,7 @@ import React from 'react';
   }
 
 onSubmitSignIn = () => {
-    fetch(`${process.env.REACT_APP_SERVER_URL}/register`, {
+    fetch('https://arcane-caverns-44362.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json '},
       body: JSON.stringify({
