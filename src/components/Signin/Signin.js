@@ -20,7 +20,7 @@ class Signin extends React.Component {
   onSubmitSignIn = () => {
     fetch('https://arcane-caverns-44362.herokuapp.com/signin', {
       method: 'post',
-      headers: {'Content-Type': 'application/json'},
+      headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'https://arcane-caverns-44362.herokuapp.com' },
       body: JSON.stringify({
         email: this.state.signInEmail,
         password: this.state.signInPassword
