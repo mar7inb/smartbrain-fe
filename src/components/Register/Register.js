@@ -25,7 +25,7 @@ import React from 'react';
 onSubmitSignIn = () => {
     fetch('https://arcane-caverns-44362.herokuapp.com/register', {
       method: 'post',
-      headers: {'Content-Type': 'application/json '},
+      headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'https://arcane-caverns-44362.herokuapp.com' },
       body: JSON.stringify({
         email: this.state.email,
         password: this.state.password,

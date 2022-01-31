@@ -185,7 +185,7 @@ onButtonSubmit = () => {
   this.setState({imageUrl: this.state.input});
      fetch('https://arcane-caverns-44362.herokuapp.com/imageurl', {
           method: 'post',
-          headers: {'Content-Type': 'application/json'},
+          headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'https://arcane-caverns-44362.herokuapp.com' },
           body: JSON.stringify({
             input: this.state.input
           })
@@ -195,7 +195,7 @@ onButtonSubmit = () => {
       if (response) { 
         fetch('https://arcane-caverns-44362.herokuapp.com/image', {
           method: 'put',
-          headers: {'Content-Type': 'application/json'},
+          headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'https://arcane-caverns-44362.herokuapp.com' },
           body: JSON.stringify({
             id: this.state.user.id
           })
