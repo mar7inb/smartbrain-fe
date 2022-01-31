@@ -23,7 +23,7 @@ import React from 'react';
   }
 
 onSubmitSignIn = () => {
-    fetch('https://ancient-tundra-81152.herokuapp.com/register', {
+    fetch('https://arcane-caverns-44362.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json '},
       body: JSON.stringify({
