@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Signin extends React.Component {
+class SignIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,7 +18,7 @@ class Signin extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    fetch('https://arcane-caverns-44362.herokuapp.com/signin', {
+    fetch('https://arcane-caverns-44362.herokuapp.com/signIn', {
       method: 'post',
       headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'https://arcane-caverns-44362.herokuapp.com' },
       body: JSON.stringify({
@@ -82,4 +82,4 @@ class Signin extends React.Component {
   }
 }
 
-export default Signin;
+export default SignIn;
